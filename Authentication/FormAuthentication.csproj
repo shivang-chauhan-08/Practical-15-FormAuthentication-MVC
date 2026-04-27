@@ -236,10 +236,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Context\ApplicationDbContext.cs" />
-    <Compile Include="Models\Entities\Employee.cs" />
-    <Compile Include="Models\Entities\RoleMaster.cs" />
     <Compile Include="Models\Entities\User.cs" />
-    <Compile Include="Models\Entities\UserRolesMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

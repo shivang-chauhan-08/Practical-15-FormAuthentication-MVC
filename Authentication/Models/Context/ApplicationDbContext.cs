@@ -13,9 +13,6 @@ namespace Authentication.Models.Context
         : base("name=connString")
         {
         }
-        public DbSet<Employee> Employees { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<RoleMaster> RoleMasters { get; set; }
-        public DbSet<UserRolesMapping> UserRolesMappings { get; set; }
     }
 }
