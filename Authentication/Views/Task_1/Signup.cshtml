@@ -1,0 +1,45 @@
+﻿@model Authentication.Models.Entities.User
+@{
+    ViewBag.Title = "Signup";
+}
+
+<h2>Signup</h2>
+
+@using (Html.BeginForm("Signup", "Task_1", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserPassword, "Password", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.UserPassword, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.UserPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Signup" class="btn btn-success" />
+            </div>
+        </div>
+
+    </div>
+}
+
+<br />
+
+<p>
+    @Html.ActionLink("Already have an account? Login", "Login", "Task_1")
+</p>
